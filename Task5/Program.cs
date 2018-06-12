@@ -16,8 +16,9 @@ namespace Task5
             //Создание квадратной матрицы
             do
             {
+                if (!OK) Console.WriteLine("Ошибка ввода");
                 //Проверка на корректность ввода
-                Console.WriteLine("Введите размерность матрицы:");
+                Console.WriteLine("Введите размерность матрицы (n>=2):");
                 str = Console.ReadLine();
                 OK = Int32.TryParse(str, out n);
             } while (!OK||n<2);//Пока не введено целое число>= 2
@@ -26,12 +27,14 @@ namespace Task5
             //Ввод i и j, по координатам которых нужно удалить i-тую строку и j-тый столбец
             do
             {
+                if (!OK) Console.WriteLine("Ошибка ввода");
                 Console.WriteLine("Введите координату X:");
                 str = Console.ReadLine();
                 OK = Int32.TryParse(str, out i);
             } while (!OK||i>n||i<=0);
             do
             {
+                if (!OK) Console.WriteLine("Ошибка ввода");
                 Console.WriteLine("Введите координату Y:");
                 str = Console.ReadLine();
                 OK = Int32.TryParse(str, out j);
